@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-        xmlns:nota="http://nota.org/schema/nota"
-        xmlns:misc="http://nota.org/schema/misc"
-        xmlns:wesen="http://nota.org/schema/lebewesen"
-        xmlns:pfad="http://nota.org/schema/pfad"
-        xmlns:profession="http://nota.org/schema/profession"
-        xmlns:talent="http://nota.org/schema/talent"
-        xmlns:fertigkeit="http://nota.org/schema/fertigkeit"
-        xmlns:besonderheit="http://nota.org/schema/besonderheit"
-        targetNamespace="http://nota.org/schema/fertigkeit"
+        xmlns:nota="http://nota.org/schema/nota.xsd"
+        xmlns:misc="http://nota.org/schema/misc.xsd"
+        xmlns:wesen="http://nota.org/schema/lebewesen.xsd"
+        xmlns:pfad="http://nota.org/schema/pfad.xsd"
+        xmlns:profession="http://nota.org/schema/profession.xsd"
+        xmlns:talent="http://nota.org/schema/talent.xsd"
+        xmlns:fertigkeit="http://nota.org/schema/fertigkeit.xsd"
+        xmlns:besonderheit="http://nota.org/schema/besonderheit.xsd"
+        targetNamespace="http://nota.org/schema/fertigkeit.xsd"
         elementFormDefault="qualified">
-  <import namespace="http://nota.org/schema/misc" schemaLocation="misc.xsd"></import>
-  <import namespace="http://nota.org/schema/lebewesen" schemaLocation="lebewesen.xsd"></import>
-  <import namespace="http://nota.org/schema/pfad" schemaLocation="pfad.xsd"></import>
-  <import namespace="http://nota.org/schema/talent" schemaLocation="talent.xsd"></import>
-  <import namespace="http://nota.org/schema/besonderheit" schemaLocation="besonderheit.xsd"></import>
+  <import namespace="http://nota.org/schema/misc.xsd" schemaLocation="misc.xsd"></import>
+  <import namespace="http://nota.org/schema/lebewesen.xsd" schemaLocation="lebewesen.xsd"></import>
+  <import namespace="http://nota.org/schema/pfad.xsd" schemaLocation="pfad.xsd"></import>
+  <import namespace="http://nota.org/schema/talent.xsd" schemaLocation="talent.xsd"></import>
+  <import namespace="http://nota.org/schema/besonderheit.xsd" schemaLocation="besonderheit.xsd"></import>
   <element name="Fertigkeiten">
     <complexType>
       <sequence>
