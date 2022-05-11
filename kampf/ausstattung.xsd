@@ -32,14 +32,14 @@
                     <element name="Name" type="misc:Lokalisierungen">
                       <unique name="SpracheUnique7">
                         <selector xpath="misc:Lokalisirung"/>
-                        <field xpath="./@Sparche"/>
+                        <field xpath="./@Sprache"/>
                         <field xpath="./@Geschlecht"/>
                       </unique>
                     </element>
                     <element name="Beschreibung" type="misc:Lokalisierungen">
                       <unique name="SpracheUnique8">
                         <selector xpath="misc:Lokalisirung"/>
-                        <field xpath="./@Sparche"/>
+                        <field xpath="./@Sprache"/>
                         <field xpath="./@Geschlecht"/>
                       </unique>
                     </element>
@@ -79,14 +79,14 @@
                     <element name="Name" type="misc:Lokalisierungen">
                       <unique name="SpracheUnique5">
                         <selector xpath="misc:Lokalisirung"/>
-                        <field xpath="./@Sparche"/>
+                        <field xpath="./@Sprache"/>
                         <field xpath="./@Geschlecht"/>
                       </unique>
                     </element>
                     <element name="Beschreibung" type="misc:Lokalisierungen">
                       <unique name="SpracheUnique6">
                         <selector xpath="misc:Lokalisirung"/>
-                        <field xpath="./@Sparche"/>
+                        <field xpath="./@Sprache"/>
                         <field xpath="./@Geschlecht"/>
                       </unique>
                     </element>
@@ -158,14 +158,14 @@
                     <element name="Name" type="misc:Lokalisierungen">
                       <unique name="SpracheUnique2">
                         <selector xpath="misc:Lokalisirung"/>
-                        <field xpath="./@Sparche"/>
+                        <field xpath="./@Sprache"/>
                         <field xpath="./@Geschlecht"/>
                       </unique>
                     </element>
                     <element name="Beschreibung" type="misc:Lokalisierungen">
                       <unique name="SpracheUnique3">
                         <selector xpath="misc:Lokalisirung"/>
-                        <field xpath="./@Sparche"/>
+                        <field xpath="./@Sprache"/>
                         <field xpath="./@Geschlecht"/>
                       </unique>
                     </element>
@@ -217,14 +217,14 @@
                     <element name="Name" type="misc:Lokalisierungen">
                       <unique name="SpracheUnique">
                         <selector xpath="misc:Lokalisirung"/>
-                        <field xpath="./@Sparche"/>
+                        <field xpath="./@Sprache"/>
                         <field xpath="./@Geschlecht"/>
                       </unique>
                     </element>
                     <element name="Beschreibung" type="misc:Lokalisierungen">
                       <unique name="SpracheUnique1">
                         <selector xpath="misc:Lokalisirung"/>
-                        <field xpath="./@Sparche"/>
+                        <field xpath="./@Sprache"/>
                         <field xpath="./@Geschlecht"/>
                       </unique>
                     </element>
