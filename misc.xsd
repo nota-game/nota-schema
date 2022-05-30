@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:misc="http://nota.org/schema/misc.xsd" xmlns:talent="http://nota.org/schema/talent.xsd" xmlns:fertigkeit="http://nota.org/schema/fertigkeit.xsd" xmlns:nota="http://nota.org/schema/nota.xsd" xmlns:pfad="http://nota.org/schema/pfad.xsd" xmlns:besonderheit="http://nota.org/schema/besonderheit.xsd" targetNamespace="http://nota.org/schema/misc.xsd" elementFormDefault="qualified">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:misc="http://nota.org/schema/misc.xsd" xmlns:talent="http://nota.org/schema/talent.xsd" xmlns:lebewesen="http://nota.org/schema/lebewesen.xsd" xmlns:fertigkeit="http://nota.org/schema/fertigkeit.xsd" xmlns:nota="http://nota.org/schema/nota.xsd" xmlns:pfad="http://nota.org/schema/pfad.xsd" xmlns:besonderheit="http://nota.org/schema/besonderheit.xsd" targetNamespace="http://nota.org/schema/misc.xsd" elementFormDefault="qualified">
   <import namespace="http://nota.org/schema/besonderheit.xsd" schemaLocation="besonderheit.xsd"></import>
   <import namespace="http://nota.org/schema/fertigkeit.xsd" schemaLocation="fertigkeit.xsd"></import>
   <import namespace="http://nota.org/schema/pfad.xsd" schemaLocation="pfad.xsd"></import>
   <import namespace="http://nota.org/schema/talent.xsd" schemaLocation="talent.xsd"></import>
   <import namespace="http://nota.org/schema/nota.xsd" schemaLocation="nota.xsd"></import>
+  <import namespace="http://nota.org/schema/lebewesen.xsd" schemaLocation="lebewesen.xsd"></import>
 
   <complexType name="NamedType">
     <attributeGroup ref="misc:NamedElement" />
@@ -345,4 +346,23 @@
   </simpleType>
 
 
+  <complexType name="Mods">
+    <sequence>
+      <element name="Eigenschaften" type="lebewesen:EigenschaftsMods" minOccurs="0" />
+      <element name="Besonderheiten" minOccurs="0">
+        <complexType>
+          <sequence>
+            <element ref="besonderheit:Besonderheit" maxOccurs="unbounded" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Tags" maxOccurs="1" minOccurs="0">
+        <complexType>
+          <sequence>
+            <element ref="misc:Tag" minOccurs="1" maxOccurs="unbounded" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
 </schema>
