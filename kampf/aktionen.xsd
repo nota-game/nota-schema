@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:nota="http://nota.org/schema/nota.xsd" xmlns:misc="http://nota.org/schema/misc.xsd" xmlns:aktionen="http://nota.org/schema/kampf/aktionen.xsd" targetNamespace="http://nota.org/schema/kampf/aktionen.xsd" elementFormDefault="qualified">
-  <import namespace="http://nota.org/schema/misc.xsd" schemaLocation="..\misc.xsd"></import>
+  <import namespace="http://nota.org/schema/misc.xsd" schemaLocation="..\misc.xsd" />
 
   <element name="Taktiken">
     <complexType>
@@ -57,20 +57,8 @@
               <element name="Eigenschaft" minOccurs="0" maxOccurs="unbounded">
                 <complexType>
                   <sequence>
-                    <element name="Name" type="misc:Lokalisierungen">
-                      <unique name="SpracheUnique">
-                        <selector xpath="misc:Lokalisirung" />
-                        <field xpath="./@Sprache" />
-                        <field xpath="./@Geschlecht" />
-                      </unique>
-                    </element>
-                    <element name="Beschreibung" type="misc:Lokalisierungen">
-                      <unique name="SpracheUnique1">
-                        <selector xpath="misc:Lokalisirung" />
-                        <field xpath="./@Sprache" />
-                        <field xpath="./@Geschlecht" />
-                      </unique>
-                    </element>
+                    <element ref="misc:Name" />
+                    <element ref="misc:Beschreibung" />
                   </sequence>
                   <attribute type="string" name="Id" use="required" />
                 </complexType>

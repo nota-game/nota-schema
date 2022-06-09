@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:nota="http://nota.org/schema/nota.xsd" xmlns:misc="http://nota.org/schema/misc.xsd" xmlns:wesen="http://nota.org/schema/lebewesen.xsd" xmlns:pfad="http://nota.org/schema/pfad.xsd" xmlns:lebewesen="http://nota.org/schema/lebewesen.xsd" xmlns:talent="http://nota.org/schema/talent.xsd" xmlns:fertigkeit="http://nota.org/schema/fertigkeit.xsd" xmlns:besonderheit="http://nota.org/schema/besonderheit.xsd" targetNamespace="http://nota.org/schema/besonderheit.xsd" elementFormDefault="qualified">
-  <import namespace="http://nota.org/schema/misc.xsd" schemaLocation="misc.xsd"></import>
-  <import namespace="http://nota.org/schema/lebewesen.xsd" schemaLocation="lebewesen.xsd"></import>
-  <import namespace="http://nota.org/schema/pfad.xsd" schemaLocation="pfad.xsd"></import>
-  <import namespace="http://nota.org/schema/talent.xsd" schemaLocation="talent.xsd"></import>
-  <import namespace="http://nota.org/schema/fertigkeit.xsd" schemaLocation="fertigkeit.xsd"></import>
+  <import namespace="http://nota.org/schema/misc.xsd" schemaLocation="misc.xsd" />
+  <import namespace="http://nota.org/schema/lebewesen.xsd" schemaLocation="lebewesen.xsd" />
+  <import namespace="http://nota.org/schema/pfad.xsd" schemaLocation="pfad.xsd" />
+  <import namespace="http://nota.org/schema/talent.xsd" schemaLocation="talent.xsd" />
+  <import namespace="http://nota.org/schema/fertigkeit.xsd" schemaLocation="fertigkeit.xsd" />
   <element name="Besonderheiten">
     <complexType>
       <sequence>
@@ -25,13 +25,7 @@
 
   <complexType name="BesonderheitDefinition">
     <sequence>
-      <element name="Name" type="misc:Lokalisierungen">
-        <unique name="SpracheUnique">
-          <selector xpath="misc:Lokalisirung" />
-          <field xpath="./@Sprache" />
-          <field xpath="./@Geschlecht" />
-        </unique>
-      </element>
+      <element ref="misc:Name" />
       <element name="SubKategorie" type="string" minOccurs="0" maxOccurs="unbounded">
         <annotation>
           <documentation>Gibt die art des Vorteis an, z.B. zum filtern.</documentation>
@@ -40,20 +34,10 @@
       <element name="Stufe" maxOccurs="unbounded" minOccurs="1">
         <complexType>
           <sequence>
-            <element name="Name" type="misc:Lokalisierungen" minOccurs="0">
-              <unique name="SpracheUnique3">
-                <selector xpath="misc:Lokalisirung" />
-                <field xpath="./@Sprache" />
-                <field xpath="./@Geschlecht" />
-              </unique>
-            </element>
-            <element name="Beschreibung" type="misc:Lokalisierungen">
-              <unique name="SpracheUnique1">
-                <selector xpath="misc:Lokalisirung" />
-                <field xpath="./@Sprache" />
-                <field xpath="./@Geschlecht" />
-              </unique>
-            </element>
+            <element ref="misc:Name" minOccurs="0" />
+           
+            <element ref="misc:Beschreibung" />
+            
             <element ref="misc:Kosten" minOccurs="0" maxOccurs="unbounded" />
             <element name="Voraussetzung" type="besonderheit:BedingungsAuswahl" minOccurs="0" />
             <element name="Mods" minOccurs="0" type="misc:Mods" />

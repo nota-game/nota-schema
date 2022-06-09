@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:nota="http://nota.org/schema/nota.xsd" xmlns:misc="http://nota.org/schema/misc.xsd" xmlns:lebewesen="http://nota.org/schema/lebewesen.xsd" xmlns:pfad="http://nota.org/schema/pfad.xsd" xmlns:profession="http://nota.org/schema/profession.xsd" xmlns:talent="http://nota.org/schema/talent.xsd" xmlns:fertigkeit="http://nota.org/schema/fertigkeit.xsd" xmlns:besonderheit="http://nota.org/schema/besonderheit.xsd" xmlns:aktion="http://nota.org/schema/kampf/aktionen.xsd" xmlns:ausstattung="http://nota.org/schema/kampf/ausstattung.xsd" targetNamespace="http://nota.org/schema/nota.xsd" elementFormDefault="qualified">
-  <import namespace="http://nota.org/schema/misc.xsd" schemaLocation="misc.xsd"></import>
-  <import namespace="http://nota.org/schema/lebewesen.xsd" schemaLocation="lebewesen.xsd"></import>
-  <import namespace="http://nota.org/schema/pfad.xsd" schemaLocation="pfad.xsd"></import>
-  <import namespace="http://nota.org/schema/talent.xsd" schemaLocation="talent.xsd"></import>
-  <import namespace="http://nota.org/schema/fertigkeit.xsd" schemaLocation="fertigkeit.xsd"></import>
-  <import namespace="http://nota.org/schema/besonderheit.xsd" schemaLocation="besonderheit.xsd"></import>
-  <import namespace="http://nota.org/schema/kampf/aktionen.xsd" schemaLocation="kampf/aktionen.xsd"></import>
-  <import namespace="http://nota.org/schema/kampf/ausstattung.xsd" schemaLocation="kampf/ausstattung.xsd"></import>
+  <import namespace="http://nota.org/schema/misc.xsd" schemaLocation="misc.xsd" />
+  <import namespace="http://nota.org/schema/lebewesen.xsd" schemaLocation="lebewesen.xsd" />
+  <import namespace="http://nota.org/schema/pfad.xsd" schemaLocation="pfad.xsd" />
+  <import namespace="http://nota.org/schema/talent.xsd" schemaLocation="talent.xsd" />
+  <import namespace="http://nota.org/schema/fertigkeit.xsd" schemaLocation="fertigkeit.xsd" />
+  <import namespace="http://nota.org/schema/besonderheit.xsd" schemaLocation="besonderheit.xsd" />
+  <import namespace="http://nota.org/schema/kampf/aktionen.xsd" schemaLocation="kampf/aktionen.xsd" />
+  <import namespace="http://nota.org/schema/kampf/ausstattung.xsd" schemaLocation="kampf/ausstattung.xsd" />
   <element name="Daten">
     <complexType>
       <sequence>
@@ -32,20 +32,20 @@
         <element ref="misc:Tags" />
 
       </sequence>
-      <attribute name="Version" use="required" type="misc:positiveInt"></attribute>
+      <attribute name="Version" use="required" type="misc:positiveInt" />
     </complexType>
 
     <unique name="BesonderheitenKategorie">
-      <selector xpath="./besonderheit:Besonderheiten"></selector>
-      <field xpath="./@KategorieId"></field>
+      <selector xpath="./besonderheit:Besonderheiten" />
+      <field xpath="./@KategorieId" />
     </unique>
     <unique name="FertigkeitenKategorie">
-      <selector xpath="./fertigkeit:Fertigkeiten"></selector>
-      <field xpath="./@KategorieId"></field>
+      <selector xpath="./fertigkeit:Fertigkeiten" />
+      <field xpath="./@KategorieId" />
     </unique>
     <unique name="TalentKategorie">
-      <selector xpath="./talent:Talente"></selector>
-      <field xpath="./@KategorieId"></field>
+      <selector xpath="./talent:Talente" />
+      <field xpath="./@KategorieId" />
     </unique>
 
     <unique name="BesonderheitUniqness">
