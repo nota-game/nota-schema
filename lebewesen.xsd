@@ -35,7 +35,7 @@
       </element>
       <element name="Eigenschaften" minOccurs="0" type="lebewesen:StartEigenschaftswerte" />
       <element name="Mods" minOccurs="0" type="misc:Mods" />
-      <element name="Lebensabschnitte">
+      <element name="Lebensabschnitte" minOccurs="0">
         <complexType>
           <sequence>
             <element name="Lebensabschnitt" maxOccurs="unbounded" type="lebewesen:LebensabschnittDefinition" />
@@ -69,7 +69,7 @@
       <element name="Mods" minOccurs="0" type="misc:Mods" />
 
       <element ref="lebewesen:StandardPfade" minOccurs="0" />
-      <element name="Lebensabschnitte">
+      <element name="Lebensabschnitte" minOccurs="0">
         <complexType>
           <sequence>
             <element name="Lebensabschnitt" maxOccurs="unbounded" type="lebewesen:LebensabschnittDefinition" />
@@ -230,8 +230,8 @@
           </sequence>
         </complexType>
       </element>
-      <element name="Name" type="misc:Lokalisierungen" />
-      <element name="Beschreibung" type="misc:Lokalisierungen" />
+      <element name="Name" type="misc:Lokalisierungen" minOccurs="0" />
+      <element name="Beschreibung" type="misc:Lokalisierungen" minOccurs="0" />
       <element name="Mods" minOccurs="0" type="misc:Mods" />
     </sequence>
     <attribute name="startAlter" type="float" use="required" />
