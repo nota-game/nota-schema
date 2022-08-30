@@ -223,7 +223,6 @@
     </sequence>
     <attribute name="startAlter" type="float" use="required" />
     <attribute name="endAlter" type="float" use="optional" />
-    <attributeGroup ref="misc:NamedElement" />
 
     <!-- Anhaltspunkte für Jugendliche (Menschen) -->
     <!-- http://www.bmi-online-rechner.de/bmi_tabelle_kinder_jugendliche.php -->
