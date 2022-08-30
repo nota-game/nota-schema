@@ -35,6 +35,13 @@
       </element>
       <element name="Eigenschaften" minOccurs="0" type="lebewesen:StartEigenschaftswerte" />
       <element name="Mods" minOccurs="0" type="misc:Mods" />
+      <element name="Lebensabschnitte">
+        <complexType>
+          <sequence>
+            <element name="Lebensabschnitt" maxOccurs="unbounded" type="lebewesen:LebensabschnittDefinition" />
+          </sequence>
+        </complexType>
+      </element>
       <element name="Art" maxOccurs="unbounded" minOccurs="1" type="lebewesen:ArtDefinition" />
     </sequence>
     <attributeGroup ref="misc:NamedElement" />
@@ -62,7 +69,13 @@
       <element name="Mods" minOccurs="0" type="misc:Mods" />
 
       <element ref="lebewesen:StandardPfade" minOccurs="0" />
-
+      <element name="Lebensabschnitte">
+        <complexType>
+          <sequence>
+            <element name="Lebensabschnitt" maxOccurs="unbounded" type="lebewesen:LebensabschnittDefinition" />
+          </sequence>
+        </complexType>
+      </element>
       <element name="Morphe">
         <complexType>
           <choice>
