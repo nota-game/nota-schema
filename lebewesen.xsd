@@ -203,10 +203,13 @@
       <element name="Mods" minOccurs="0" type="misc:Mods" />
       <element name="Entwiklung">
         <complexType>
-          <choice maxOccurs="unbounded">
-            <element name="Reihe" type="lebewesen:ReiheDefinition" />
-            <element name="Punkt" type="lebewesen:PunktDefintion" />
-          </choice>
+          <sequence>
+            <element name="Berechnung" type="lebewesen:FormelDefintion" />
+            <choice maxOccurs="unbounded">
+              <element name="Reihe" type="lebewesen:ReiheDefinition" />
+              <element name="Punkt" type="lebewesen:PunktDefintion" />
+            </choice>
+          </sequence>
         </complexType>
       </element>
       <element name="Lebensabschnitte">
@@ -287,6 +290,24 @@
         </complexType>
       </element>
     </sequence>
+    <attribute name="id" type="string" use="required" />
+    <attribute name="Reihenfolge" type="float" use="optional" default="0" />
+  </complexType>
+
+  <complexType name="FormelDefintion">
+    <sequence>
+      <element ref="misc:Name" />
+      <element ref="misc:Beschreibung" minOccurs="0" />
+      <element name="Formel" type="string">
+        <annotation>
+          <documentation>Die Formel kann folgende Variabeln enthalten: MU, KL, etc…. Zusätzlich eine Funkttion für alle anderen Entwicklungseigenschaften mit ihrer Id Das Ergebnis ist eine Zahl. </documentation>
+        </annotation>
+      </element>
+
+    </sequence>
+    <attribute name="einheit" type="string" use="optional" default="" />
+    <attribute name="Reihenfolge" type="float" use="optional" default="0" />
+    <attribute name="id" type="string" use="required" />
   </complexType>
 
   <complexType name="ReiheDefinition">
@@ -328,12 +349,13 @@
 
           </complexType>
         </element>
-    
+
       </sequence>
     </sequence>
     <attribute name="step" type="float" use="optional" default="1" />
     <attribute name="startAlter" type="float" use="optional" default="1" />
     <attribute name="einheit" type="string" use="optional" default="" />
+    <attribute name="Reihenfolge" type="float" use="optional" default="0" />
     <attribute name="id" type="string" use="required" />
   </complexType>
 
