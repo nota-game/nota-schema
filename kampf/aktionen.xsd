@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:nota="http://nota.org/schema/nota.xsd" xmlns:misc="http://nota.org/schema/misc.xsd" xmlns:aktionen="http://nota.org/schema/kampf/aktionen.xsd" targetNamespace="http://nota.org/schema/kampf/aktionen.xsd" elementFormDefault="qualified">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:nota="http://nota.org/schema/nota.xsd"
+  xmlns:misc="http://nota.org/schema/misc.xsd"
+  xmlns:aktionen="http://nota.org/schema/kampf/aktionen.xsd"
+  targetNamespace="http://nota.org/schema/kampf/aktionen.xsd" elementFormDefault="qualified">
   <import namespace="http://nota.org/schema/misc.xsd" schemaLocation="..\misc.xsd" />
 
   <element name="Taktiken">
@@ -8,7 +11,8 @@
         <element name="Taktik" maxOccurs="unbounded" minOccurs="0">
           <complexType>
             <sequence>
-              <element name="Beschreibung" type="string" />
+              <element ref="misc:Name" />
+              <element ref="misc:Beschreibung" />
               <element name="Bedingung" type="string" minOccurs="0" />
               <element name="SofortigerEffekt" type="string" minOccurs="0" />
               <element name="GarantierterEffekt" type="string" minOccurs="0" />
@@ -30,7 +34,7 @@
               <element name="Eigenschaften" minOccurs="0">
                 <complexType>
                   <sequence>
-                    <element ref="aktionen:Eigenschaft"  maxOccurs="unbounded"/>
+                    <element ref="aktionen:Eigenschaft" maxOccurs="unbounded" />
                   </sequence>
                 </complexType>
               </element>
